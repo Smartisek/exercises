@@ -12,10 +12,10 @@ void question3();
 void question4();
 void question6();
 void question7();
-
+void question8();
 
 int main() {
-    question7();
+    question8();
     return 0;
 }
 
@@ -206,5 +206,14 @@ int areSameUntil(const vector<int> &vec1,  const vector<int> &vec2){
             return i-1;
         }
     }
-    return min-1;
+    return 5;
+}
+
+void question8(){
+    vector<int> string1 = {5,6,7,8};
+    vector<int> string2 = {5, 6,7,15};
+
+    int result = areSameUntil(string1, string2);
+
+    cout << result << endl;
 }
