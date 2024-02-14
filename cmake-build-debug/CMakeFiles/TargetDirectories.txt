@@ -1,0 +1,3 @@
+C:/Users/domal/OneDrive/Plocha/DKIT/SecondYear/C++/exercise/cmake-build-debug/CMakeFiles/exercise.dir
+C:/Users/domal/OneDrive/Plocha/DKIT/SecondYear/C++/exercise/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/domal/OneDrive/Plocha/DKIT/SecondYear/C++/exercise/cmake-build-debug/CMakeFiles/rebuild_cache.dir
