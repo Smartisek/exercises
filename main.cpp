@@ -10,10 +10,12 @@ void question1();
 void question2();
 void question3();
 void question4();
+void question6();
+void question7();
 
 
 int main() {
-    question4();
+    question7();
     return 0;
 }
 
@@ -54,6 +56,16 @@ void display(const vector<int> &numbers){
         }
         cout << numbers.at(i);
     }
+}
+void print(string &s,const vector<string> &strs){
+    cout << s << "[" ;
+    for(auto iter = strs.begin(); iter != strs.end(); iter ++){
+        if(iter != strs.begin()){
+            cout << ", ";
+        }
+        cout << *iter;
+    }
+    cout << "]" << endl;
 }
 
 void question1(){
@@ -157,4 +169,42 @@ void question4(){
         cout << words.at(i);
     }
 
+}
+void question6(){
+    vector<string> strs {"apple", "orange"};
+    auto func = [](string s1, string s2){
+        if(s1.size() == s2.size()){
+            return s1 >s2;
+        }
+        return s1.size() < s2.size();
+    };
+    sort(strs.begin(), strs.end(), func);
+    string s = "My strings";
+    print(s, strs);
+}
+void question7(){
+    vector<string> mths{"Jan", "Apr", "May", "Sept", "Nov", "Dec"};
+    vector<string>::iterator iter = mths.begin();
+    iter++;
+    iter = mths.insert(iter, "Mar");
+    iter = mths.insert(iter, "Feb");
+    iter +=4;
+    iter = mths.insert(iter, "Aug");
+    iter = mths.insert(iter, "July");
+    iter = mths.insert(iter, "June");
+    iter+=4;
+    iter = mths.insert(iter, "Oct");
+    string s = "Months";
+    print(s, mths);
+}
+
+int areSameUntil(const vector<int> &vec1,  const vector<int> &vec2){
+    int pos = 0;
+    int min = vec1.size()<vec2.size()?vec1.size():vec2.size();
+    for(int i = 0; i< min; i++){
+        if(vec1[i] != vec2[i]){
+            return i-1;
+        }
+    }
+    return min-1;
 }
